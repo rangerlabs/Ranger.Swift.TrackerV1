@@ -13,10 +13,9 @@ import Ranger_Swift_ApiClientV1
 public final class RangerTrackerV1: NSObject, ObservableObject {
     private let locationManager: CLLocationManager
     static private let misconfigurationError = "Tracker misconfigured. Ensure .configure() was called."
-    private static let instance = RangerTrackerV1()
+    public static let instance = RangerTrackerV1()
     public static private(set) var deviceId: String = ""
     public static private(set) var breadcrumbApiKey: String = ""
-    public static private(set) var projectApiKey: String = ""
     public static private(set) var externalUserId: String? = ""
     public static private(set) var breadcrumbMetadata: [KeyValuePair] = []
     @Published public var context = TrackerContext.default
@@ -35,26 +34,22 @@ public final class RangerTrackerV1: NSObject, ObservableObject {
         instance.locationManager.requestAlwaysAuthorization()
     }
     
-    public static func configure(deviceId: String, breadcrumbApiKey: String, projectApiKey: String) throws {
+    public static func configure(deviceId: String, breadcrumbApiKey: String) throws {
         try TrackerConfigurationValidator.deviceIdValid(deviceId: deviceId)
         try TrackerConfigurationValidator.breadcrumbApiKeyValid(breadcrumbApiKey: breadcrumbApiKey)
-        try TrackerConfigurationValidator.projectApiKeyValid(projectApiKey: projectApiKey)
-        
+
         RangerTrackerV1.deviceId = deviceId
         RangerTrackerV1.breadcrumbApiKey = breadcrumbApiKey
-        RangerTrackerV1.projectApiKey = projectApiKey
     }
     
-    public static func configure(deviceId: String, externalUserId: String, breadcrumbApiKey: String, projectApiKey: String) throws {
+    public static func configure(deviceId: String, externalUserId: String, breadcrumbApiKey: String) throws {
         try TrackerConfigurationValidator.deviceIdValid(deviceId: deviceId)
         try TrackerConfigurationValidator.externalUserIdValid(externalUserId: externalUserId)
         try TrackerConfigurationValidator.breadcrumbApiKeyValid(breadcrumbApiKey: breadcrumbApiKey)
-        try TrackerConfigurationValidator.projectApiKeyValid(projectApiKey: projectApiKey)
 
         RangerTrackerV1.deviceId = deviceId
         RangerTrackerV1.externalUserId = externalUserId
         RangerTrackerV1.breadcrumbApiKey = breadcrumbApiKey
-        RangerTrackerV1.projectApiKey = projectApiKey
     }
     
     public static func trackStandardLocation(desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyBest, distanceFilter: CLLocationDistance = kCLDistanceFilterNone, pauseLocationUpdatesAutomatically: Bool = false, activityType: CLActivityType = .other) {
@@ -120,10 +115,6 @@ public final class RangerTrackerV1: NSObject, ObservableObject {
     public static func setBreadcrumbMetadata(metadata: [KeyValuePair]) {
         RangerTrackerV1.breadcrumbMetadata = metadata
         RangerTrackerV1.instance.context.breadcrumbMetadata = metadata
-    }
-    
-    public static func setLastEvent(lastGeofenceEvent: GeofenceEvent) {
-        instance.context.lastGeofenceEvent = lastGeofenceEvent
     }
 }
 

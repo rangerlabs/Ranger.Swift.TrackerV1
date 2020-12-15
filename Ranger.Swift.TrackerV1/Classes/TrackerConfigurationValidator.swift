@@ -26,10 +26,4 @@ struct TrackerConfigurationValidator {
             throw TrackerMisconfiguration.breadcrumbApiKeyMustNotBeNilOrEmpty
         }
     }
-    
-    static func projectApiKeyValid(projectApiKey: String) throws {
-        if (projectApiKey.isEmpty) {
-            throw TrackerMisconfiguration.projectApiKeyMustNotBeNilOrEmpty
-        }
-    }
 }

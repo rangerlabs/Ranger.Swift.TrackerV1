@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Ranger.Swift.TrackerV1/Classes/**/*'
   
-  s.dependency 'Ranger.Swift.ApiClientV1', '~> 0.4.0'
+  s.dependency 'Ranger.Swift.ApiClientV1', '~> 1.0.0'
   s.dependency 'PusherSwift', '~> 9.0'
 end

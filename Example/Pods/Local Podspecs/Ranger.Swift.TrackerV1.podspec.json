@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "The Swift Tracker for Ranger, via the v1 API.",
   "swift_versions": "5.0",
-  "description": "Used to communicate track and forward breadcrumbs to Ranger.",
+  "description": "Used to track and forward breadcrumbs to the Ranger v1 API.",
   "homepage": "https://github.com/rangerlabs/Ranger.Swift.TrackerV1",
   "license": {
     "type": "Apache 2.0",

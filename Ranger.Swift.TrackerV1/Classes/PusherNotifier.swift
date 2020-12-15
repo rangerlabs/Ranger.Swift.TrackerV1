@@ -23,7 +23,7 @@ public class PusherNotifier: PusherDelegate {
         decoder.dateDecodingStrategy = .formatted(isoFormatter)
     }
     
-    public static func pusherConnect(pusherKey: String, cluster: String) {
+    public static func pusherConnect(pusherKey: String, cluster: String, completionHandler: @escaping ((GeofenceEvent) -> Void)) {
         options = PusherClientOptions(
           host: .cluster(cluster)
         )
@@ -42,7 +42,7 @@ public class PusherNotifier: PusherDelegate {
             }
             print(jsonData)
             let geofenceEvent: GeofenceEvent = try! instance.decoder.decode(GeofenceEvent.self, from: jsonData)
-            RangerTrackerV1.setLastEvent(lastGeofenceEvent: geofenceEvent)
+            completionHandler(geofenceEvent)
         })
     }
     

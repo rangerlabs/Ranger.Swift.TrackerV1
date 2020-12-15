@@ -41,7 +41,7 @@ SPEC CHECKSUMS:
   PusherSwift: 45f6fbc208022c20a9efc81f3ced88a92deaa3d9
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   Ranger.Swift.ApiClientV1: fb299139da1d95fb9d73ba1853cd52d934be66d8
-  Ranger.Swift.TrackerV1: 30a5a8f37ccb14a35d7f42a9b46d2692e6118af6
+  Ranger.Swift.TrackerV1: cdf12fde884616d5c08685a0d413fe946f56f01b
   TweetNacl: 3abf4d1d2082b0114e7a67410e300892448951e6
 
 PODFILE CHECKSUM: 0c60251b69e49b940a96774d9c0fbb93f2306eff

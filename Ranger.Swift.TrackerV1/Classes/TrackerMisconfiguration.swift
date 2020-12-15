@@ -10,5 +10,4 @@ public enum TrackerMisconfiguration : Error {
     case deviceIdMustNotBeNilOrEmpty
     case externalUserIdMustNotBeNilOrEmpty
     case breadcrumbApiKeyMustNotBeNilOrEmpty
-    case projectApiKeyMustNotBeNilOrEmpty
 }

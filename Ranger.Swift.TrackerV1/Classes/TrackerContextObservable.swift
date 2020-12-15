@@ -9,5 +9,8 @@
 import Foundation
 
 public final class TrackerContextObservable: ObservableObject {
+    public init()
+    { }
+    
     @Published public var context = TrackerContext.default
 }

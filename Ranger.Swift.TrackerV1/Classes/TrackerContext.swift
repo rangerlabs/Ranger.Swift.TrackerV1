@@ -20,7 +20,6 @@ public struct TrackerContext {
     public var breadcrumbMetadata: [KeyValuePair]
     public var trackingMethod: TrackingMethod
     public var lastPosition: CLLocationCoordinate2D
-    public var lastGeofenceEvent: GeofenceEvent?
     public var date: Date
 }
 
