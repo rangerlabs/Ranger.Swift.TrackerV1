@@ -10,7 +10,6 @@
 		00740BB275FA3071BAB13645091D4908 /* PusherCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B71D25ADCCB450E577A03EC0088F5C /* PusherCrypto.swift */; };
 		013BAC24F7AC722E59517CB110A9E685 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F2435C2D666B90834A4E3B7BB46DC /* HTTPMethod.swift */; };
 		018228C4760DF4F8B80630BC9ACCB39E /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE0EC9D6702E10CD6A71C6E4E797F5D /* DSL.swift */; };
-		0197CEC5258843A000274558 /* TrackerContextObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0197CEC22588434400274558 /* TrackerContextObservable.swift */; };
 		02410DC27912EE55AD6EA82EC52FA1FE /* LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DE0B6AE253F44AA43B9D8BA49B55A2 /* LatLng.swift */; };
 		02EDE6F260E8E95CAC741342606CBE65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7F9ABC8D1C511C6BFC342432A57A00 /* Foundation.framework */; };
 		0892D14FE7A3452423E9129D7917664B /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14DC9C39CC0389971B6BF36F64651DF /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -122,6 +121,7 @@
 		887AF8C809D60140319DE71D6427F370 /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7009E44CDC498DEF8BF0508F247C00 /* NSBundle+CurrentTestBundle.swift */; };
 		89EE4D6DBDB79963D65AA1E67B543B6D /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FAB1D1B1A74DCC6D8F1999FFEA932 /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8A0EF19254BAC5DF0885D1FBA345E016 /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9235F255D0FD0BAA26B3F856DAAEF6E4 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		8A8047D26631F10D60CC977220696D42 /* TrackerContextObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55043D823D5446F99DC3DA761C99B06A /* TrackerContextObservable.swift */; };
 		8AA937910F87915DE700CAB6C868689E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F372F9505897E23DE3E457EA25C335A /* Notifications.swift */; };
 		8AAD33A93EFEC71C056D7454992B1E6C /* PusherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F82534EAA656650B1ED4AE64A6ECE1 /* PusherError.swift */; };
 		8C0AF72D95C03E32492116F9A99A5DA2 /* NWWebSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF46E00337FBAEB89DECA2C48F3DF6F /* NWWebSocket-dummy.m */; };
@@ -332,7 +332,6 @@
 
 /* Begin PBXFileReference section */
 		00A3E1BE0C088C36611C2BE1B97B31DC /* ContainElementSatisfying.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainElementSatisfying.swift; path = Sources/Nimble/Matchers/ContainElementSatisfying.swift; sourceTree = "<group>"; };
-		0197CEC22588434400274558 /* TrackerContextObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackerContextObservable.swift; path = Ranger.Swift.TrackerV1/Classes/TrackerContextObservable.swift; sourceTree = "<group>"; };
 		0484268202CD3A0B8CB776FDF284B391 /* TrackerMisconfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrackerMisconfiguration.swift; path = Ranger.Swift.TrackerV1/Classes/TrackerMisconfiguration.swift; sourceTree = "<group>"; };
 		05D556EE66EA68456C3743E92D7D80AC /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Sources/Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		062A8DC953BE0BC449F2C04027784FB2 /* Ranger.Swift.TrackerV1-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ranger.Swift.TrackerV1-prefix.pch"; sourceTree = "<group>"; };
@@ -418,6 +417,7 @@
 		4E7DD2DA9B2840A55A6B00CE73C61899 /* Pods-Ranger.Swift.TrackerV1_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ranger.Swift.TrackerV1_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FD4F3B4FE0E58C0ECC840ADD6F24344 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
 		508836C3C2A1546C3F25692CE585C6AC /* PusherChannelsProtocolCloseCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherChannelsProtocolCloseCode.swift; path = Sources/Models/PusherChannelsProtocolCloseCode.swift; sourceTree = "<group>"; };
+		55043D823D5446F99DC3DA761C99B06A /* TrackerContextObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrackerContextObservable.swift; path = Ranger.Swift.TrackerV1/Classes/TrackerContextObservable.swift; sourceTree = "<group>"; };
 		55F21C17B3D96D197AF53A5B6E328540 /* Quick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.debug.xcconfig; sourceTree = "<group>"; };
 		5710F9E28F3CDEC55482109C5DE7B761 /* NWWebSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NWWebSocket.debug.xcconfig; sourceTree = "<group>"; };
 		579F2435C2D666B90834A4E3B7BB46DC /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
@@ -1153,11 +1153,11 @@
 		E0874DB7CE95B3FDD6126A265C6EC631 /* Ranger.Swift.TrackerV1 */ = {
 			isa = PBXGroup;
 			children = (
-				6A43148B2E284C3295789ADFB85C0C5F /* RangerTrackerV1.swift */,
 				D0FB125C9D119C264F5746C4F2F81B25 /* PusherNotifier.swift */,
-				0197CEC22588434400274558 /* TrackerContextObservable.swift */,
+				6A43148B2E284C3295789ADFB85C0C5F /* RangerTrackerV1.swift */,
 				085559AB19F7B68C58E542D9C8F15ED9 /* TrackerConfigurationValidator.swift */,
 				75458CB7BAF53B90F538F73FBEFD1921 /* TrackerContext.swift */,
+				55043D823D5446F99DC3DA761C99B06A /* TrackerContextObservable.swift */,
 				0484268202CD3A0B8CB776FDF284B391 /* TrackerMisconfiguration.swift */,
 				C8CDB05BE669BF5320CC6049E95AB854 /* TrackingMethodEnum.swift */,
 				CC280AE472384A45B0FE7970DD5A52CA /* GeofenceEvent */,
@@ -1466,7 +1466,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1170;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1786,7 +1786,7 @@
 				C8FA607B79F67D00A792A6DC6809C82B /* RangerTrackerV1.swift in Sources */,
 				C0DE736F9A3CF3482011AE7B46A6F38E /* TrackerConfigurationValidator.swift in Sources */,
 				54E64814A96920E6EFE7053B67C619B8 /* TrackerContext.swift in Sources */,
-				0197CEC5258843A000274558 /* TrackerContextObservable.swift in Sources */,
+				8A8047D26631F10D60CC977220696D42 /* TrackerContextObservable.swift in Sources */,
 				34690E874F322E697DA86F415568FCF6 /* TrackerMisconfiguration.swift in Sources */,
 				FD33FCA2651AD72A44EEC4DB514D63EB /* TrackingMethodEnum.swift in Sources */,
 			);
@@ -1899,7 +1899,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B073FB0564ADEAC41226899976D782BC /* Alamofire.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1931,7 +1930,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDAE996815AD49A593E2B46B650DEE3B /* TweetNacl.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1963,7 +1961,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 383C7ADED2A8D0714BBEB466ED330AF0 /* Quick.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1994,7 +1991,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D9068D0D0ED6D9C86540C85DC69B4D7 /* Ranger.Swift.TrackerV1.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2027,7 +2023,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9AE440B01663A94039F828B1CD60CB0F /* PusherSwift.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2060,7 +2055,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9814892C5F0CBC61797D08B8713F35E /* Alamofire.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2093,7 +2087,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AA6D9D99F5E3A56053B17B3F43D9AB8 /* Ranger.Swift.ApiClientV1.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2126,7 +2119,6 @@
 			baseConfigurationReference = 2510D2833DBF31E86B9CCE9973FED9F1 /* Pods-Ranger.Swift.TrackerV1_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2160,7 +2152,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4F5FBC7672B3A8D5CC7E31308823182 /* NWWebSocket.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2193,7 +2184,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55F21C17B3D96D197AF53A5B6E328540 /* Quick.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2223,7 +2213,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CE1E4AC7FFEFFF50FC674A8B6260786 /* PusherSwift.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2382,7 +2371,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D514F1BD66DC97EC144EED5132B8355B /* Nimble.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2413,7 +2401,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 079E712B4F2C423C5EE1DE6B6CE159E6 /* Ranger.Swift.ApiClientV1.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2446,7 +2433,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 241AAF12F1B3F6E1F01A78CE02472ABF /* Nimble.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2476,7 +2462,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF4E0BA7EC346DDE9DE68267F67CDC7B /* Ranger.Swift.TrackerV1.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2508,7 +2493,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E31A30E04FAD57DAA7AAEFE296E07535 /* TweetNacl.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2539,7 +2523,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5710F9E28F3CDEC55482109C5DE7B761 /* NWWebSocket.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2572,7 +2555,6 @@
 			baseConfigurationReference = 4E7DD2DA9B2840A55A6B00CE73C61899 /* Pods-Ranger.Swift.TrackerV1_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

@@ -127,7 +127,7 @@ extension RangerTrackerV1: CLLocationManagerDelegate {
             let accuracy = RangerTrackerV1.instance.context.desiredAccuracy < 0 ? 0 : RangerTrackerV1.instance.context.desiredAccuracy
             let metadata = RangerTrackerV1.breadcrumbMetadata
             let breadcrumb = try Breadcrumb(deviceId: RangerTrackerV1.deviceId, position: try LatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude ), recordedAt: Date(), accuracy: accuracy, metadata: metadata)
-            try RangerApiClientV1.PostBreadcrumb(breadcrumb: breadcrumb, apiKey: RangerTrackerV1.breadcrumbApiKey) {response in
+            try RangerSwiftApiClientV1.PostBreadcrumb(breadcrumb: breadcrumb, apiKey: RangerTrackerV1.breadcrumbApiKey) {response in
                 debugPrint(response)
             }
         } catch {
