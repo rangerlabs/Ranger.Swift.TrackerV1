@@ -26,6 +26,12 @@
     ],
     "PusherSwift": [
       "~> 9.0"
+    ],
+    "RxSwift": [
+      "6.0.0-rc.2"
+    ],
+    "RxCocoa": [
+      "6.0.0-rc.2"
     ]
   },
   "swift_version": "5.0"

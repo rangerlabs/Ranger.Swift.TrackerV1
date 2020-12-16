@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import Ranger_Swift_ApiClientV1
+import RxSwift
 
 public final class RangerTrackerV1: NSObject, ObservableObject {
     private let locationManager: CLLocationManager
@@ -19,6 +20,7 @@ public final class RangerTrackerV1: NSObject, ObservableObject {
     public static private(set) var externalUserId: String? = ""
     public static private(set) var breadcrumbMetadata: [KeyValuePair] = []
     @Published public var context = TrackerContext.default
+    private var location: Disposable? = nil
 
     private override init() {
         locationManager = CLLocationManager()
@@ -104,6 +106,7 @@ public final class RangerTrackerV1: NSObject, ObservableObject {
             default:
                 instance.locationManager.stopUpdatingLocation()
         }
+        self.instance.location?.dispose()
         instance.context.isTracking = false
     }
     
@@ -121,20 +124,26 @@ public final class RangerTrackerV1: NSObject, ObservableObject {
 extension RangerTrackerV1: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        self.context.lastPosition = location.coordinate
-
-        do {
-            let accuracy = RangerTrackerV1.instance.context.desiredAccuracy < 0 ? 0 : RangerTrackerV1.instance.context.desiredAccuracy
-            let metadata = RangerTrackerV1.breadcrumbMetadata
-            let breadcrumb = try Breadcrumb(deviceId: RangerTrackerV1.deviceId, position: try LatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude ), recordedAt: Date(), accuracy: accuracy, metadata: metadata)
-            try RangerSwiftApiClientV1.PostBreadcrumb(breadcrumb: breadcrumb, apiKey: RangerTrackerV1.breadcrumbApiKey) {response in
-                debugPrint(response)
+        self.location = Observable.of(location)
+            .throttle(.seconds(3), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe { location in
+                guard let coordinates = location.element?.coordinate else {return}
+                self.context.lastPosition = coordinates
+                do {
+                    let accuracy = RangerTrackerV1.instance.context.desiredAccuracy < 0 ? 0 : RangerTrackerV1.instance.context.desiredAccuracy
+                    let metadata = RangerTrackerV1.breadcrumbMetadata
+                    let breadcrumb = try Breadcrumb(deviceId: RangerTrackerV1.deviceId, position: try LatLng(lat: coordinates.latitude, lng: coordinates.longitude ), recordedAt: Date(), accuracy: accuracy, metadata: metadata)
+                    try RangerSwiftApiClientV1.PostBreadcrumb(breadcrumb: breadcrumb, apiKey: RangerTrackerV1.breadcrumbApiKey) {response in
+                        debugPrint(response)
+                    }
+                } catch {
+                    debugPrint(error)
+                }
+                
             }
-        } catch {
-            debugPrint(error)
-        }
-    }
-    
+   }
+
     public func locationManagerDidPauseLocationUpdates(_ manager: CLLocationManager) {
         self.context.isPaused = true
     }

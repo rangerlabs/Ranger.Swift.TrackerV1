@@ -3,7 +3,9 @@ target 'Ranger.Swift.TrackerV1_Tests' do
   pod 'Ranger.Swift.TrackerV1', :path => '../'
   pod 'Ranger.Swift.ApiClientV1', '~> 1.0.1'
   pod 'PusherSwift', '~> 9.0'
-  
+  pod 'RxSwift', '6.0.0-rc.2'
+  pod 'RxCocoa', '6.0.0-rc.2'
+
   pod 'Quick', '~> 2.2.0'
     pod 'Nimble', '~> 8.0.7'
 end
