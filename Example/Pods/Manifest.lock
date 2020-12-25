@@ -1,34 +1,24 @@
 PODS:
-  - Alamofire (5.4.0)
+  - Alamofire (5.4.1)
   - Nimble (8.0.9)
   - NWWebSocket (0.5.0)
   - PusherSwift (9.1.0):
     - NWWebSocket (~> 0.5.0)
     - TweetNacl (~> 1.0.0)
   - Quick (2.2.1)
-  - Ranger.Swift.ApiClientV1 (1.0.1):
+  - Ranger.Swift.ApiClientV1 (1.0.2):
     - Alamofire (~> 5.2)
-  - Ranger.Swift.TrackerV1 (0.2.0):
+  - Ranger.Swift.TrackerV1 (0.3.0):
     - PusherSwift (~> 9.0)
-    - Ranger.Swift.ApiClientV1 (~> 1.0.1)
-    - RxCocoa (= 6.0.0-rc.2)
-    - RxSwift (= 6.0.0-rc.2)
-  - RxCocoa (6.0.0-rc.2):
-    - RxRelay (= 6.0.0-rc.2)
-    - RxSwift (= 6.0.0-rc.2)
-  - RxRelay (6.0.0-rc.2):
-    - RxSwift (= 6.0.0-rc.2)
-  - RxSwift (6.0.0-rc.2)
+    - Ranger.Swift.ApiClientV1 (~> 1.0.2)
   - TweetNacl (1.0.2)
 
 DEPENDENCIES:
   - Nimble (~> 8.0.7)
   - PusherSwift (~> 9.0)
   - Quick (~> 2.2.0)
-  - Ranger.Swift.ApiClientV1 (~> 1.0.1)
+  - Ranger.Swift.ApiClientV1 (~> 1.0.2)
   - Ranger.Swift.TrackerV1 (from `../`)
-  - RxCocoa (= 6.0.0-rc.2)
-  - RxSwift (= 6.0.0-rc.2)
 
 SPEC REPOS:
   trunk:
@@ -38,9 +28,6 @@ SPEC REPOS:
     - PusherSwift
     - Quick
     - Ranger.Swift.ApiClientV1
-    - RxCocoa
-    - RxRelay
-    - RxSwift
     - TweetNacl
 
 EXTERNAL SOURCES:
@@ -48,18 +35,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   NWWebSocket: 330ba83058d3d4c1ecce152f28d25a755dd55463
   PusherSwift: 45f6fbc208022c20a9efc81f3ced88a92deaa3d9
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
-  Ranger.Swift.ApiClientV1: 92aff5e752613c520c4f73a31e9c1656154e997d
-  Ranger.Swift.TrackerV1: 145a5e72da53435d210a0487fab0cf715cb757a2
-  RxCocoa: 38445a25751be5907f52f7ea02c137f52ce2e7f2
-  RxRelay: b9e2483e83f46e4e7bf1234c6fe418e5c2eaf825
-  RxSwift: ada35be6643bedf6881cdbd6bbfb27aeea527670
+  Ranger.Swift.ApiClientV1: 906123d54055ec88a691935e149e7b8214318f0d
+  Ranger.Swift.TrackerV1: 2a7f90e5b1fed3f041b8ca4bb1d436380e0df969
   TweetNacl: 3abf4d1d2082b0114e7a67410e300892448951e6
 
-PODFILE CHECKSUM: b4eb5628f02e2d4e20564ea72b82fbe0d12589b1
+PODFILE CHECKSUM: 5d2fe6c3b94c7d6edc7d52ac156aa51d3079517d
 
 COCOAPODS: 1.10.0
