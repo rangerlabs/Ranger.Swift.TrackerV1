@@ -1,7 +1,7 @@
 use_frameworks!
 target 'Ranger.Swift.TrackerV1_Tests' do
   pod 'Ranger.Swift.TrackerV1', :path => '../'
-  pod 'Ranger.Swift.ApiClientV1', '~> 1.0.2'
+  pod 'Ranger.Swift.ApiClientV1', '~> 1.0.4'
   pod 'PusherSwift', '~> 9.0'
 
   pod 'Quick', '~> 2.2.0'

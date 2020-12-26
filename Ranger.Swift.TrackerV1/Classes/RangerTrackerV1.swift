@@ -116,6 +116,10 @@ public final class RangerTrackerV1: NSObject, ObservableObject {
         RangerTrackerV1.breadcrumbMetadata = metadata
         RangerTrackerV1.instance.context.breadcrumbMetadata = metadata
     }
+    
+    public static func setApiBaseUrl(url: String) {
+        RangerSwiftApiClientV1.SetBaseUrl(url: url)
+    }
 }
 
 extension RangerTrackerV1: CLLocationManagerDelegate {

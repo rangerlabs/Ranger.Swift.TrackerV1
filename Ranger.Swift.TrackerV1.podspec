@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Ranger.Swift.TrackerV1'
-  s.version          = '0.4.0'
+  s.version          = '0.5.0'
   s.summary          = 'The Swift Tracker for Ranger, via the v1 API.'
   s.swift_version    = '5.0'
 
@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Ranger.Swift.TrackerV1/Classes/**/*'
   
-  s.dependency 'Ranger.Swift.ApiClientV1', '~> 1.0.2'
+  s.dependency 'Ranger.Swift.ApiClientV1', '~> 1.0.4'
   s.dependency 'PusherSwift', '~> 9.0'
 end

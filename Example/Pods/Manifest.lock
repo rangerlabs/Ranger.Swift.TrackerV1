@@ -6,18 +6,18 @@ PODS:
     - NWWebSocket (~> 0.5.0)
     - TweetNacl (~> 1.0.0)
   - Quick (2.2.1)
-  - Ranger.Swift.ApiClientV1 (1.0.2):
+  - Ranger.Swift.ApiClientV1 (1.0.4):
     - Alamofire (~> 5.2)
-  - Ranger.Swift.TrackerV1 (0.3.0):
+  - Ranger.Swift.TrackerV1 (0.4.0):
     - PusherSwift (~> 9.0)
-    - Ranger.Swift.ApiClientV1 (~> 1.0.2)
+    - Ranger.Swift.ApiClientV1 (~> 1.0.4)
   - TweetNacl (1.0.2)
 
 DEPENDENCIES:
   - Nimble (~> 8.0.7)
   - PusherSwift (~> 9.0)
   - Quick (~> 2.2.0)
-  - Ranger.Swift.ApiClientV1 (~> 1.0.2)
+  - Ranger.Swift.ApiClientV1 (~> 1.0.4)
   - Ranger.Swift.TrackerV1 (from `../`)
 
 SPEC REPOS:
@@ -40,10 +40,10 @@ SPEC CHECKSUMS:
   NWWebSocket: 330ba83058d3d4c1ecce152f28d25a755dd55463
   PusherSwift: 45f6fbc208022c20a9efc81f3ced88a92deaa3d9
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
-  Ranger.Swift.ApiClientV1: 906123d54055ec88a691935e149e7b8214318f0d
-  Ranger.Swift.TrackerV1: 2a7f90e5b1fed3f041b8ca4bb1d436380e0df969
+  Ranger.Swift.ApiClientV1: 1b16ec950ac4d0886599bc750e699343960b87a5
+  Ranger.Swift.TrackerV1: 62802aef7a2c99ac6ce28a5fd70e09412c35268c
   TweetNacl: 3abf4d1d2082b0114e7a67410e300892448951e6
 
-PODFILE CHECKSUM: 5d2fe6c3b94c7d6edc7d52ac156aa51d3079517d
+PODFILE CHECKSUM: 05e28489396cc9221ab409dbc864250461fc936a
 
 COCOAPODS: 1.10.0
