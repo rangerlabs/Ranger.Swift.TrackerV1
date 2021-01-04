@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Ranger.Swift.TrackerV1'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = 'The Swift Tracker for Ranger, via the v1 API.'
   s.swift_version    = '5.0'
 
