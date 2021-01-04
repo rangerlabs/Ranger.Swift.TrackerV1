@@ -19,7 +19,7 @@ public class PusherNotifier: PusherDelegate {
     private init() {
         let isoFormatter = DateFormatter()
         isoFormatter.timeZone = TimeZone(secondsFromGMT: 0)!
-        isoFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        isoFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
         decoder.dateDecodingStrategy = .formatted(isoFormatter)
     }
     
