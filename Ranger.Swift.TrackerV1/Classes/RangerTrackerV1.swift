@@ -83,13 +83,13 @@ public final class RangerTrackerV1: NSObject, ObservableObject {
         instance.locationManager.startMonitoringSignificantLocationChanges()
     }
     
-    public static func allowsBackgroundLocationUpdates(value: Bool = true, showBackgroundLocationIndicator: Bool = false)
+    public static func allowsBackgroundLocationUpdates(allowsBackgroundLocationUpdates: Bool = true, showBackgroundLocationIndicator: Bool = false)
     {
         if (deviceId.isEmpty) {
             print(misconfigurationError)
             return
         }
-        instance.locationManager.allowsBackgroundLocationUpdates = value
+        instance.locationManager.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates
         instance.locationManager.showsBackgroundLocationIndicator = showBackgroundLocationIndicator
     }
     
